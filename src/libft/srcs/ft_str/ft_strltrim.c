@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 char	*ft_strltrim(char const *s1, char const *set, size_t len)
 {

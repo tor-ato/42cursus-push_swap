@@ -6,11 +6,11 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:09:22 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/07/09 21:56:15 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 22:03:55 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 int	ft_isalpha(int c)
 {
