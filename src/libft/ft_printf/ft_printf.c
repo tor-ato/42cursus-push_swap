@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:38:34 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/07/09 21:57:58 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 21:48:27 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,26 @@ int	ft_printf(const char *str, ...)
 	va_end(ap);
 	return (len);
 }
+
+// #include <libc.h>
+// #include <limits.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int	main(void)
+// {
+// 	int	ft;
+// 	int	origin;
+// 	int	*ft_ad;
+// 	int	*origin_ad;
+
+// 	ft = 123;
+// 	origin = 123;
+// 	ft_ad = &ft;
+// 	origin_ad = &origin;
+// ft = ft_printf("ft \t %p %p \n", LONG_MIN, LONG_MAX);
+// printf("print nbr \t %d \n", ft);
+// origin = printf("or \t %p %p \n", LONG_MIN, LONG_MAX);
+// printf("print nbr \t %d \n", origin);
+// 	return (0);
+// }

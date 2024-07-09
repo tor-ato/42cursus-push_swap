@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:41:00 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/11 15:13:08 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 22:00:01 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,3 @@ char	*ft_strrchr(const char *s, int c)
 			return (NULL);
 	}
 }
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char *test1s;
-// 	char test1c;
-
-// 	test1s = "12345";
-// 	test1c = '5';
-// 	printf("origin\t%s\n", strrchr(test1s, test1c));
-// 	printf("ft\t%s\n", ft_strrchr(test1s, test1c));
-// }

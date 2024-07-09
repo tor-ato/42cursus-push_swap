@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:49:14 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/11 17:14:46 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 21:59:14 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,3 @@ char	*ft_strdup(const char *s)
 	*(str + s_len) = 0;
 	return (str);
 }
-
-// #include <limits.h>
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char	*a1;
-// 	char	*a2;
-
-// 	a1 = "12345";
-// 	a2 = "12345";
-// 	printf("\n");
-// 	printf("ans\t %s \n", strdup(a1));
-// 	printf("ans\t %s \n", ft_strdup(a2));
-// 	printf("\n");
-// 	return (0);
-// }

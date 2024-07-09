@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:02 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 14:07:02 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 22:00:34 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,3 @@ char	*ft_itoa(int n)
 		str[--i] = '0';
 	return (ft_strdup(&str[i]));
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char *(*test)(int);
-// 	test = ft_itoa;
-// 	int n = 0;
-// 	printf("ft_itoa\t%s\n", test(n));
-// 	return (0);
-// }

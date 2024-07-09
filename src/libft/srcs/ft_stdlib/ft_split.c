@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:15 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/11 15:10:50 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 21:59:02 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res - splited_arraysize_tmp);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char s1[] = "aaAAaaBBaaCCaa";
-// 	char set = 'a';
-// 	char **res = ft_split(s1, set);
-
-// 	while (*res)
-// 		printf("ft_split\t%s\n", *res++);
-// 	(void)res;
-// 	return (0);
-// }

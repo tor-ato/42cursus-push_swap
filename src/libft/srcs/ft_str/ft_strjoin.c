@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:18 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/01 13:36:43 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 21:59:21 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(res, s2, (s1_len + s2_len) + 1);
 	return (res);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char s1[] = "123";
-// 	char s2[] = "456";
-
-// 	printf("ft_strjoin\t%s\n", ft_strjoin(s1, s2));
-
-// 	return (0);
-// }

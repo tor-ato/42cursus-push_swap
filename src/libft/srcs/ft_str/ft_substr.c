@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:10:58 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/11 17:14:17 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 22:00:11 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(res, s + start, (len + 1));
 	return (res);
 }
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char s[] = "tripouille";
-// 	unsigned int start = 1;
-// 	size_t len = 1;
-
-// 	printf("ft_substr\t%s\n", ft_substr(s, start, len));
-
-// 	return (0);
-// }

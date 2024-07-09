@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:39:46 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/11 16:53:18 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 21:59:52 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char *test1s1;
-// 	test1s1 = NULL;
-// 	char *test1s2;
-// 	test1s2 = "hello";
-// 	int test1;
-// 	test1 = 0;
-// 	printf("origin\t%d\n", strncmp(test1s1, test1s2, test1));
-// 	printf("ft\t%d\n", ft_strncmp(test1s1, test1s2, test1));
-// }

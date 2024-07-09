@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:55:10 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 14:27:40 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/07/09 22:00:29 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-
-// int	main(void)
-// {
-// 	char num[] = "9223372036854775809";
-
-// 	printf("num: %s\n", num);
-// 	printf("   atoi: %d\n", atoi(num));
-// 	printf("ft_atoi: %d\n", ft_atoi(num));
-// 	return (0);
-// }
