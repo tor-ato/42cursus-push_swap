@@ -1,13 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/20 20:52:48 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/04/24 19:48:11 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/07/09 21:57:35 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/libft.h"
 
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	while (n--)
+	{
+		if (*(char *)s++ == (char)c)
+			return ((void *)s - 1);
+	}
+	return (NULL);
+}

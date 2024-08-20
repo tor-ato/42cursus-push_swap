@@ -1,13 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/20 20:52:48 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/04/30 14:12:02 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/07/09 21:59:49 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/libft.h"
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	char			*str;
+
+	i = -1;
+	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
+	while (s[++i])
+		str[i] = f(i, s[i]);
+	return (str);
+}

@@ -1,13 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/20 20:52:48 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/04/16 16:09:22 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/07/09 22:03:55 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/libft.h"
 
+int	ft_isalpha(int c)
+{
+	return (ft_islower(c) || ft_isupper(c));
+}

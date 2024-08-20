@@ -1,13 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/20 20:52:48 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/05/17 15:29:46 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/05/18 19:04:21 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/libft.h"
 
+int	ft_putstr(char *str)
+{
+	if (!str)
+		str = "(null)";
+	ft_putstr_fd(str, 1);
+	return (ft_strlen(str));
+}

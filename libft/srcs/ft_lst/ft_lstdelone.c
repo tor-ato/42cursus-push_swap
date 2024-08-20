@@ -1,13 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/20 20:52:48 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/05/09 14:52:14 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/07/09 21:57:15 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/libft.h"
 
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
+}
