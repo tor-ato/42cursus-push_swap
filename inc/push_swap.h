@@ -6,7 +6,7 @@
 /*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/26 16:31:37 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/08/28 22:20:20 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdbool.h>
 # include <limits.h>
-# include "../libft/includes/libft.h"
+# include <libft.h>
 
 typedef struct s_stack_node
 {
@@ -55,7 +55,7 @@ void			sb(t_stack_node **b, bool print);
 void			ss(t_stack_node **a, t_stack_node **b, bool print);
 void			ra(t_stack_node **a, bool print);
 void			rb(t_stack_node **b, bool print);
-void			rr(t_stack_node **a, bool print);
+void			rr(t_stack_node **a, t_stack_node **b, bool print);
 void			rra(t_stack_node **a, bool print);
 void			rrb(t_stack_node **b, bool print);
 void			rrr(t_stack_node **a, t_stack_node **b, bool print);

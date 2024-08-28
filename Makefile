@@ -1,4 +1,4 @@
-NAME	= puhsh_swap
+NAME	= push_swap
 
 LIBFT	= ./libft/libft.a
 INC 	= inc/
@@ -6,16 +6,16 @@ SRCS_DIR	= srcs/
 OBJ_DIR	= obj/
 
 CC		= cc
-CFLAGS	= -Wall -Wextra -Werror -I
+CFLAGS	= -Wall -Wextra -Werror -I 
 RM		= rm -f
 	
-COMMANDS_DIR	= $(SRC_DIR)commands/push.c \
+COMMANDS	= $(SRC_DIR)commands/push.c \
 				  $(SRC_DIR)commands/rotate.c \
 				  $(SRC_DIR)commands/sort_stacks.c \
 				  $(SRC_DIR)commands/sort_tree.c \
 				  $(SRC_DIR)commands/swap.c
 
-PUSH_SWAP_DIR	= $(SRC_DIR)push_swap/handle_errors.c \
+PUSH_SWAP	= $(SRC_DIR)push_swap/handle_errors.c \
 				  $(SRC_DIR)push_swap/init_a_to_b.c \
 				  $(SRC_DIR)push_swap/init_b_to_a.c \
 				  $(SRC_DIR)push_swap/push_swap.c \
@@ -33,20 +33,20 @@ $(LIBFT):
 all:	$(NAME)
 
 $(NAME):	$(OBJ) $(LIBFT)
-	@$(CC) $(CFLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME)
+	$(CC) $(CFLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME)
 
 
 $(OBJ_DIR)%.o:	$(SRC_DIR)%.c
-	@mkdir -p $(@D)
-	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
+	mkdir -p $(@D)
+	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
-	@$(RM) -r $(OBJ_DIR)
-	@make clean -C ./libft
+	$(RM) -r $(OBJ_DIR)
+	make clean -C ./libft
 
 fclean:	clean
-	@$(RM) $(NAME)
-	@$(RM) $(LIBFT)
+	$(RM) $(NAME)
+	$(RM) $(LIBFT)
 
 re: fclean all
 
