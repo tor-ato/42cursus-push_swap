@@ -45,15 +45,14 @@ static char	*get_next_word(char *s, char c)
 
 	len = 0;
 	i = 0;
-
 	while (s[cursor] == c)
 		++c;
 	while ((s[cursor + len] != c) && (s[cursor + len]))
 		++len;
 	next_word = malloc((size_t)len * sizeof(char) + 2);
-	if(!next_word)
+	if (!next_word)
 		return (NULL);
-	while ((s[cursor] != c) && s[cursor]) 
+	while ((s[cursor] != c) && s[cursor])
 		next_word[i++] = s[cursor++];
 	next_word[i] = 0;
 	return (next_word);
@@ -76,15 +75,14 @@ char	**split(char *s, char c)
 	{
 		if (i == 0)
 		{
-			result_array[i] =malloc(sizeof(char));
-			if(!result_array[i])
+			result_array[i] = malloc(sizeof(char));
+			if (!result_array[i])
 				return (NULL);
 			result_array[i++][0] = 0;
-			continue;
+			continue ;
 		}
 		result_array[i++] = get_next_word(s, c);
 	}
 	result_array[i] = NULL;
 	return (result_array);
 }
-
