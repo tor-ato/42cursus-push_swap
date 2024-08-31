@@ -52,7 +52,7 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 	else
 	{
-		last_node = finde_last(*stack);
+		last_node = find_last(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}

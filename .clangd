@@ -1,0 +1,10 @@
+CompileFlags:
+  Add: 
+    - -xc
+    - -Wall
+    - -Wextra
+    - -Werror
+    - -I./inc/
+    - -I./libft/includes
+
+  Compiler: clang

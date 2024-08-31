@@ -6,7 +6,7 @@
 /*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/28 22:20:20 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/08/29 15:22:13 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdbool.h>
 # include <limits.h>
-# include <libft.h>
+# include "libft.h"
 
 typedef struct s_stack_node
 {
@@ -45,7 +45,7 @@ t_stack_node	*get_cheapast(t_stack_node *stack);
 void			prep_for_push(t_stack_node **s, t_stack_node *n, char c);
 
 int				stack_len(t_stack_node *stack);
-t_stack_node	*finde_last(t_stack_node *stack);
+t_stack_node	*find_last(t_stack_node *stack);
 bool			stack_sorted(t_stack_node *stack);
 t_stack_node	*find_min(t_stack_node *stack);
 t_stack_node	*find_max(t_stack_node *stack);
