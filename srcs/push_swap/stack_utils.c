@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdbool.h>
+#include <push_swap.h>
 
 int stack_len(t_stack_node *stack)
 {

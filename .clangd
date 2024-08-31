@@ -4,7 +4,8 @@ CompileFlags:
     - -Wall
     - -Wextra
     - -Werror
-    - -I./inc/
-    - -I./libft/includes
+    - "-include libft/includes"
+    - "-include inc/"
+
 
   Compiler: clang
