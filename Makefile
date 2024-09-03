@@ -1,6 +1,6 @@
 NAME    = push_swap
 LIBFT   = ./libft/libft.a
-INC     = inc/
+INC     = ./inc/
 SRCS_DIR    = srcs/
 OBJ_DIR     = obj/
 CC      = cc
@@ -19,7 +19,6 @@ $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
 $(OBJ_DIR)%.o: $(SRCS_DIR)%.c
-	echo "aaa"
 	mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
