@@ -48,3 +48,13 @@ bool	stack_sorted(t_stack_node *stack)
 	}
 	return (true);
 }
+
+t_stack_node	find_min(t_stack_node *stack)
+{
+
+}
+
+t_stack_node	find_max(t_stack_node *stack)
+{
+
+}

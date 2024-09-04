@@ -58,19 +58,6 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 }
 
-int	error_duplicate(t_stack_node *a, int n)
-{
-	if (!a)
-		return (0);
-	while (a)
-	{
-		if (a->nbr == n)
-			return (1);
-		a = a->next;
-	}
-	return (0);
-}
-
 void	init_stack_a(t_stack_node **a, char **argv)
 {
 	long	n;
@@ -90,3 +77,8 @@ void	init_stack_a(t_stack_node **a, char **argv)
 		i++;
 	}
 }
+
+getcheapest
+
+prepforpush
+
