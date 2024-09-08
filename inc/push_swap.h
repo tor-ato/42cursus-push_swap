@@ -42,8 +42,8 @@ void			init_nodes_a(t_stack_node *a, t_stack_node *b);
 void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 void			current_index(t_stack_node *stack);
 void			set_cheapast(t_stack_node *stack);
-t_stack_node	*get_cheapast(t_stack_node *stack);
-void			prep_for_push(t_stack_node **s, t_stack_node *n, char c);
+t_stack_node	*get_cheapest(t_stack_node *stack);
+void			prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name);
 
 int				stack_len(t_stack_node *stack);
 t_stack_node	*find_last(t_stack_node *stack);
