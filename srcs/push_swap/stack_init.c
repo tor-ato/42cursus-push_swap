@@ -98,16 +98,16 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name
 		if (stack_name == 'a')
 		{
 			if (top_node->above_median)
-				ra(stack,false);
+				ra(stack, false);
 			else
-				rra(stack,false);
+				rra(stack, false);
 		}
 		else if (stack_name == 'b')
 		{
 			if (top_node->above_median)
-				rb(stack,false);
+				rb(stack, false);
 			else
-				rrb(stack,false);
+				rrb(stack, false);
 		}
 	}
 }
