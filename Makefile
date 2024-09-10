@@ -7,7 +7,7 @@ CC      = cc
 CFLAGS  = -Wall -Wextra -Werror -I$(INC) -I./libft/includes/
 RM      = rm -f
 
-COMMANDS    = push.c rotate.c sort_stacks.c sort_three.c swap.c
+COMMANDS    = push.c rotate.c sort_stacks.c sort_three.c swap.c rev_rotate.c
 PUSH_SWAP   = handle_errors.c init_a_to_b.c init_b_to_a.c push_swap.c split.c stack_init.c stack_utils.c
 
 SRCS    = $(addprefix $(SRCS_DIR)commands/, $(COMMANDS)) \
