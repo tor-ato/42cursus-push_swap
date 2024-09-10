@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 21:56:27 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/28 22:58:56 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/09/10 12:41:03 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,15 @@ t_stack_node	*get_cheapest(t_stack_node *stack)
 		return (NULL);
 	while (stack)
 	{
-		if(stack->cheapest)
+		if (stack->cheapest)
 			return (stack);
 		stack = stack->next;
 	}
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name)
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+														char stack_name)
 {
 	while (*stack != top_node)
 	{

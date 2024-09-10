@@ -5,10 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 16:35:33 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/09/04 19:17:21 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/09/10 12:24:12 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/09/10 12:25:05 by tkitahar         ###   ########.fr       */
 /*                                                                            */
-/* ************************************* */
+/* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
@@ -21,7 +21,7 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 	*src = (*src)->next;
 	if (*src)
 		(*src)->prev = NULL;
-	push_node->prev =NULL;
+	push_node->prev = NULL;
 	if (!*dst)
 	{
 		*dst = push_node;

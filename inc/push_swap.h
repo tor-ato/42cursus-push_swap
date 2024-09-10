@@ -6,7 +6,7 @@
 /*   By: tkitahar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:20:01 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/29 15:22:13 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/09/10 12:43:36 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 void			current_index(t_stack_node *stack);
 void			set_cheapast(t_stack_node *stack);
 t_stack_node	*get_cheapest(t_stack_node *stack);
-void			prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name);
+void			prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+					char stack_name);
 
 int				stack_len(t_stack_node *stack);
 t_stack_node	*find_last(t_stack_node *stack);
@@ -63,6 +64,7 @@ void			rrr(t_stack_node **a, t_stack_node **b, bool print);
 void			pa(t_stack_node **a, t_stack_node **b, bool print);
 void			pb(t_stack_node **b, t_stack_node **a, bool print);
 
+void			move_b_to_a(t_stack_node **a, t_stack_node **b);
 void			sort_three(t_stack_node **a);
 void			sort_stacks(t_stack_node **a, t_stack_node **b);
 

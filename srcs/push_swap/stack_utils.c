@@ -6,14 +6,14 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 17:01:54 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/08/28 22:56:14 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/09/10 12:39:13 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 #include <climits>
 
-int stack_len(t_stack_node *stack)
+int	stack_len(t_stack_node *stack)
 {
 	int	count;
 
@@ -83,7 +83,7 @@ t_stack_node	*find_max(t_stack_node *stack)
 		if (stack->nbr > max)
 		{
 			max = stack->nbr;
-			max_node =stack;
+			max_node = stack;
 		}
 		stack = stack->next;
 	}
