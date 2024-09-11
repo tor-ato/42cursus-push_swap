@@ -12,7 +12,7 @@
 
 #include "../../inc/push_swap.h"
 
-char	**process_args(int argc, char **argv)
+static char	**process_args(int argc, char **argv)
 {
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		exit(1);
@@ -21,7 +21,7 @@ char	**process_args(int argc, char **argv)
 	return (argv + 1);
 }
 
-void	sort_if_needed(t_stack_node **a, t_stack_node **b)
+static void	sort_if_needed(t_stack_node **a, t_stack_node **b)
 {
 	if (!stack_sorted(*a))
 	{
@@ -34,7 +34,7 @@ void	sort_if_needed(t_stack_node **a, t_stack_node **b)
 	}
 }
 
-void	free_split(char **str_arr)
+static void	free_split(char **str_arr)
 {
 	int	i;
 
@@ -54,7 +54,10 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	str_arr = process_args(argc, argv);
-	init_stack_a(&a, str_arr);
+	if (str_arr[0] && str_arr[0][0] == '\0')
+		init_stack_a(&a, str_arr + 1);
+	else
+		init_stack_a(&a, str_arr);
 	sort_if_needed(&a, &b);
 	free_stack(&a);
 	if (argc == 2)
