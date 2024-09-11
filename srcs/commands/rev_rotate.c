@@ -22,6 +22,7 @@ static void	rev_rotate(t_stack_node **stack)
 	last->prev->next = NULL;
 	last->next = *stack;
 	last->prev = NULL;
+	*stack = last;
 	last->next->prev = last;
 }
 

@@ -12,27 +12,52 @@
 
 #include "../../inc/push_swap.h"
 
+char	**process_args(int argc, char **argv)
+{
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
+		exit(1);
+	if (argc == 2)
+		return (split(argv[1], ' '));
+	return (argv + 1);
+}
+
+void	sort_if_needed(t_stack_node **a, t_stack_node **b)
+{
+	if (!stack_sorted(*a))
+	{
+		if (stack_len(*a) == 2)
+			sa(a, false);
+		else if (stack_len(*a) == 3)
+			sort_three(a);
+		else
+			sort_stacks(a, b);
+	}
+}
+
+void	free_split(char **str_arr)
+{
+	int	i;
+
+	i = 0;
+	if (!str_arr)
+		return ;
+	while (str_arr[i])
+		free(str_arr[i++]);
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
+	char			**str_arr;
 
 	a = NULL;
 	b = NULL;
-	if (argc == 1 && (argc == 2 && !argv[1][0]))
-		return (1);
-	else if (argc == 2)
-		argv = split(argv[1], ' ');
-	init_stack_a(&a, argv + 1);
-	if (!stack_sorted(a))
-	{
-		if (stack_len(a) == 2)
-			sa(&a, false);
-		else if (stack_len(a) == 3)
-			sort_three(&a);
-		else
-			sort_stacks(&a, &b);
-	}
+	str_arr = process_args(argc, argv);
+	init_stack_a(&a, str_arr);
+	sort_if_needed(&a, &b);
 	free_stack(&a);
+	if (argc == 2)
+		free_split(str_arr);
 	return (0);
 }
