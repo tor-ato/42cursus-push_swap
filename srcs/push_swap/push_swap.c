@@ -18,7 +18,7 @@ static char	**process_args(int argc, char **argv)
 		exit(1);
 	if (argc == 2)
 		return (split(argv[1], ' '));
-	return (argv + 1);
+	return (argv);
 }
 
 static void	sort_if_needed(t_stack_node **a, t_stack_node **b)
@@ -54,10 +54,7 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	str_arr = process_args(argc, argv);
-	if (str_arr[0] && str_arr[0][0] == '\0')
-		init_stack_a(&a, str_arr + 1);
-	else
-		init_stack_a(&a, str_arr);
+	init_stack_a(&a, str_arr + 1);
 	sort_if_needed(&a, &b);
 	free_stack(&a);
 	if (argc == 2)
