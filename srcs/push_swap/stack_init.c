@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
+#include <stdbool.h>
 
 static long	ft_atol(const char *s)
 {
@@ -45,6 +46,7 @@ static void	append_node(t_stack_node **stack, int n)
 		return ;
 	node->next = NULL;
 	node->nbr = n;
+	node->cheapest = false;
 	if (!(*stack))
 	{
 		*stack = node;
