@@ -17,6 +17,11 @@
 # include <limits.h>
 # include <stdlib.h>
 # include "../libft/includes/libft.h"
+typedef enum s_age 
+{
+	KENTA = 27,
+	TRT = 24,
+}			t_age;
 
 typedef struct s_stack_node
 {

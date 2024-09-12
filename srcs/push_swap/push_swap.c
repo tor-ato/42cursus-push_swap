@@ -25,9 +25,9 @@ static void	sort_if_needed(t_stack_node **a, t_stack_node **b)
 {
 	if (!stack_sorted(*a))
 	{
-		if (stack_len(*a) == 2)
+		if (stack_len(*a) == 2) // TWO_NODE
 			sa(a, false);
-		else if (stack_len(*a) == 3)
+		else if (stack_len(*a) == 3) // THREE_NODE
 			sort_three(a);
 		else
 			sort_stacks(a, b);
@@ -43,6 +43,7 @@ static void	free_split(char **str_arr)
 		return ;
 	while (str_arr[i])
 		free(str_arr[i++]);
+	free(str_arr);
 }
 
 int	main(int argc, char **argv)
@@ -51,6 +52,9 @@ int	main(int argc, char **argv)
 	t_stack_node	*b;
 	char			**str_arr;
 
+	int	age;
+	
+	age = TRT;
 	a = NULL;
 	b = NULL;
 	str_arr = process_args(argc, argv);
