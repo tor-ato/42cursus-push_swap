@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
+#include <stdbool.h>
 
 int	stack_len(t_stack_node *stack)
 {
@@ -39,7 +40,7 @@ t_stack_node	*find_last(t_stack_node *stack)
 bool	stack_sorted(t_stack_node *stack)
 {
 	if (!stack)
-		return (1);
+		return (true);
 	while (stack->next)
 	{
 		if (stack->nbr > stack->next->nbr)
