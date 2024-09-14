@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 20:44:19 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/09/10 12:37:40 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/05/17 15:29:46 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/05/18 19:04:21 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/push_swap.h"
+#include "../../includes/libft.h"
 
-void	sort_three(t_stack_node **a)
+void	ft_dputstr(int fd, char *str)
 {
-	t_stack_node	*biggest_node;
-
-	biggest_node = find_last_node(*a);
-	if (biggest_node == *a)
-		ra(a);
-	else if ((*a)->next == biggest_node)
-		rra(a);
-	if ((*a)->nbr > (*a)->next->nbr)
-		sa(a);
-}
-
-void	move_b_to_a(t_stack_node **a, t_stack_node **b)
-{
-	rotate_until_topnode(a, (*b)->target_node, 'a');
-	pa(a, b);
+	if (!str)
+		str = "(null)";
+	ft_putstr_fd(str, fd);
+	return ;
 }

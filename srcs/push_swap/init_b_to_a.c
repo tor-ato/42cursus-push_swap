@@ -12,7 +12,7 @@
 
 #include "../../inc/push_swap.h"
 
-static void	set_target_b(t_stack_node *a, t_stack_node *b)
+static void	set_targetof_b(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
 	t_stack_node	*target_node;
@@ -32,7 +32,7 @@ static void	set_target_b(t_stack_node *a, t_stack_node *b)
 			current_a = current_a->next;
 		}
 		if (best_mach_index == LONG_MAX)
-			b->target_node = find_min(a);
+			b->target_node = find_min_nbr_node(a);
 		else
 			b->target_node = target_node;
 		b = b->next;
@@ -41,7 +41,7 @@ static void	set_target_b(t_stack_node *a, t_stack_node *b)
 
 void	init_nodes_b(t_stack_node *a, t_stack_node *b)
 {
-	current_index(a);
-	current_index(b);
-	set_target_b(a, b);
+	set_index_and_isabove_midian(a);
+	set_index_and_isabove_midian(b);
+	set_targetof_b(a, b);
 }

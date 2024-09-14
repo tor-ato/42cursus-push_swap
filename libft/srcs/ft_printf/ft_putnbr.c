@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
-#include <stdio.h>
 
 int	ft_putnbr(long nbr, char *base)
 {

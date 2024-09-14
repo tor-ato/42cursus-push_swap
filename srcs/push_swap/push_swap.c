@@ -23,11 +23,11 @@ static char	**process_args(int argc, char **argv)
 
 static void	sort_if_needed(t_stack_node **a, t_stack_node **b)
 {
-	if (!stack_sorted(*a))
+	if (!is_stack_sorted(*a))
 	{
-		if (stack_len(*a) == 2) // TWO_NODE
-			sa(a, false);
-		else if (stack_len(*a) == 3) // THREE_NODE
+		if (count_stack_len(*a) == 2) // TWO_NODE
+			sa(a);
+		else if (count_stack_len(*a) == 3) // THREE_NODE
 			sort_three(a);
 		else
 			sort_stacks(a, b);
@@ -52,9 +52,6 @@ int	main(int argc, char **argv)
 	t_stack_node	*b;
 	char			**str_arr;
 
-	int	age;
-	
-	age = TRT;
 	a = NULL;
 	b = NULL;
 	str_arr = process_args(argc, argv);

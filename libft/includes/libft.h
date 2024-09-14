@@ -16,10 +16,9 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -95,10 +94,17 @@ char				**ft_split(char const *s, char c);
 void				*ft_calloc(size_t n, size_t m);
 
 // printf
-int					ft_printf(const char *fmt, ...);
+int					ft_printf(const char *str, ...);
 int					ft_putchar(char c);
 int					ft_putstr(char *c);
 int					ft_putnbr(long nbr, char *base);
 int					ft_putaddress(uintptr_t nbr, char *base);
+
+// dprintf
+void				ft_dprintf(int fd, const char *str, ...);
+void				ft_dputchar(int fd, char c);
+void				ft_dputstr(int fd, char *c);
+void				ft_dputnbr(int fd, long nbr, char *base);
+void				ft_dputaddress(int fd, uintptr_t nbr, char *base);
 
 #endif

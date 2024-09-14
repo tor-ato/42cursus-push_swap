@@ -13,7 +13,7 @@
 #include "../../inc/push_swap.h"
 #include <stdbool.h>
 
-int	stack_len(t_stack_node *stack)
+int	count_stack_len(t_stack_node *stack)
 {
 	int	count;
 
@@ -28,7 +28,7 @@ int	stack_len(t_stack_node *stack)
 	return (count);
 }
 
-t_stack_node	*find_last(t_stack_node *stack)
+t_stack_node	*find_last_node(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -37,7 +37,7 @@ t_stack_node	*find_last(t_stack_node *stack)
 	return (stack);
 }
 
-bool	stack_sorted(t_stack_node *stack)
+bool	is_stack_sorted(t_stack_node *stack)
 {
 	if (!stack)
 		return (true);
@@ -50,7 +50,7 @@ bool	stack_sorted(t_stack_node *stack)
 	return (true);
 }
 
-t_stack_node	*find_min(t_stack_node *stack)
+t_stack_node	*find_min_nbr_node(t_stack_node *stack)
 {
 	long			min;
 	t_stack_node	*min_node;
@@ -70,7 +70,7 @@ t_stack_node	*find_min(t_stack_node *stack)
 	return (min_node);
 }
 
-t_stack_node	*find_max(t_stack_node *stack)
+t_stack_node	*find_max_nbr_node(t_stack_node *stack)
 {
 	long			max;
 	t_stack_node	*max_node;

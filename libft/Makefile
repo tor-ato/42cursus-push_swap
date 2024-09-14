@@ -32,6 +32,11 @@ SRCS		=	$(SRCS_DIR)ft_is/ft_isalnum.c \
 			 	$(SRCS_DIR)ft_mem/ft_memcpy.c \
 			 	$(SRCS_DIR)ft_mem/ft_memmove.c \
 			 	$(SRCS_DIR)ft_mem/ft_memset.c \
+			 	$(SRCS_DIR)ft_dprintf/ft_dprintf.c \
+			 	$(SRCS_DIR)ft_dprintf/ft_dputaddress.c \
+			 	$(SRCS_DIR)ft_dprintf/ft_dputchar.c \
+			 	$(SRCS_DIR)ft_dprintf/ft_dputnbr.c \
+			 	$(SRCS_DIR)ft_dprintf/ft_dputstr.c \
 			 	$(SRCS_DIR)ft_printf/ft_printf.c \
 			 	$(SRCS_DIR)ft_printf/ft_putaddress.c \
 			 	$(SRCS_DIR)ft_printf/ft_putchar.c \

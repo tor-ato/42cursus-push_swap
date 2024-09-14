@@ -1,0 +1,12 @@
+CompileFlags:
+  Add: 
+    - -xc
+    - -Wall
+    - -Wextra
+    - -Werror
+    - "-Wno-unused-includes"
+    - "-include libft/includes"
+    - "-include inc/"
+
+
+  Compiler: clang

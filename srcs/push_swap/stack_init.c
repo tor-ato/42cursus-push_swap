@@ -54,7 +54,7 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 	else
 	{
-		last_node = find_last(*stack);
+		last_node = find_last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}
@@ -68,19 +68,19 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		if (error_syntax(argv[i]))
-			free_errors(a);
+		if (is_error_syntax(argv[i]))
+			free_and_output_errors(a);
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
-			free_errors(a);
-		if (error_duplicate(*a, n))
-			free_errors(a);
+			free_and_output_errors(a);
+		if (is_error_duplicate(*a, n))
+			free_and_output_errors(a);
 		append_node(a, (int)n);
 		i++;
 	}
 }
 
-t_stack_node	*get_cheapest(t_stack_node *stack)
+t_stack_node	*get_cheapest_node(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -93,7 +93,7 @@ t_stack_node	*get_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+void	rotate_until_topnode(t_stack_node **stack, t_stack_node *top_node,
 														char stack_name)
 {
 	while (*stack != top_node)
@@ -101,16 +101,16 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 		if (stack_name == 'a')
 		{
 			if (top_node->above_median)
-				ra(stack, false);
+				ra(stack);
 			else
-				rra(stack, false);
+				rra(stack);
 		}
 		else if (stack_name == 'b')
 		{
 			if (top_node->above_median)
-				rb(stack, false);
+				rb(stack);
 			else
-				rrb(stack, false);
+				rrb(stack);
 		}
 	}
 }
