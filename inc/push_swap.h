@@ -54,8 +54,8 @@ void			rotate_until_topnode(t_stack_node **stack, t_stack_node *top_node,
 int				count_stack_len(t_stack_node *stack);
 t_stack_node	*find_last_node(t_stack_node *stack);
 bool			is_stack_sorted(t_stack_node *stack);
-t_stack_node	*find_min_nbr_node(t_stack_node *stack);
-t_stack_node	*set_max_nbr_in_nodes(t_stack_node *stack);
+t_stack_node	*find_smallest_nbr_node(t_stack_node *stack);
+t_stack_node	*find_biggest_nbr_node(t_stack_node *stack);
 
 void			sa(t_stack_node **a);
 void			sb(t_stack_node **b);

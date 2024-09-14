@@ -16,7 +16,7 @@ void	sort_three(t_stack_node **a)
 {
 	t_stack_node	*biggest_node;
 
-	biggest_node = find_last_node(*a);
+	biggest_node = find_biggest_nbr_node(*a);
 	if (biggest_node == *a)
 		ra(a);
 	else if ((*a)->next == biggest_node)

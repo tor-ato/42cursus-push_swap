@@ -53,7 +53,7 @@ static void	set_targetof_a(t_stack_node *a, t_stack_node *b)
 			current_b = current_b->next;
 		}
 		if (best_match_index == LONG_MIN)
-			a->target_node = find_last_node(b);
+			a->target_node = find_biggest_nbr_node(b);
 		else
 			a->target_node = target_node;
 		a = a->next;

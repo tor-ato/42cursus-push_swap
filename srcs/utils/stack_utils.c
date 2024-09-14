@@ -50,7 +50,7 @@ bool	is_stack_sorted(t_stack_node *stack)
 	return (true);
 }
 
-t_stack_node	*find_min_nbr_node(t_stack_node *stack)
+t_stack_node	*find_smallest_nbr_node(t_stack_node *stack)
 {
 	long			min;
 	t_stack_node	*min_node;
@@ -70,7 +70,7 @@ t_stack_node	*find_min_nbr_node(t_stack_node *stack)
 	return (min_node);
 }
 
-t_stack_node	*find_max_nbr_node(t_stack_node *stack)
+t_stack_node	*find_biggest_nbr_node(t_stack_node *stack)
 {
 	long			max;
 	t_stack_node	*max_node;

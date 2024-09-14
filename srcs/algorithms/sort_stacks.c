@@ -48,9 +48,9 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 
 static void	min_on_top(t_stack_node **a)
 {
-	while ((*a)->nbr != find_min_nbr_node(*a)->nbr)
+	while ((*a)->nbr != find_smallest_nbr_node(*a)->nbr)
 	{
-		if (find_min_nbr_node(*a)->above_median)
+		if (find_smallest_nbr_node(*a)->above_median)
 			ra(a);
 		else
 			rra(a);

@@ -32,7 +32,7 @@ static void	set_targetof_b(t_stack_node *a, t_stack_node *b)
 			current_a = current_a->next;
 		}
 		if (best_mach_index == LONG_MAX)
-			b->target_node = find_min_nbr_node(a);
+			b->target_node = find_smallest_nbr_node(a);
 		else
 			b->target_node = target_node;
 		b = b->next;
