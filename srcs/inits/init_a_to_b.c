@@ -12,7 +12,7 @@
 
 #include "../../inc/push_swap.h"
 
-void	set_index_and_isabove_midian(t_stack_node *stack)
+void	set_index_and_abovemidian(t_stack_node *stack)
 {
 	int	i;
 	int	median;
@@ -102,8 +102,8 @@ void	find_and_set_cheapstcost_node(t_stack_node *stack)
 
 void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
-	set_index_and_isabove_midian(a);
-	set_index_and_isabove_midian(b);
+	set_index_and_abovemidian(a);
+	set_index_and_abovemidian(b);
 	set_targetof_a(a, b);
 	calculate_pushcostof_a(a, b);
 	find_and_set_cheapstcost_node(a);

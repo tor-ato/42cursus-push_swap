@@ -41,7 +41,7 @@ static void	set_targetof_b(t_stack_node *a, t_stack_node *b)
 
 void	init_nodes_b(t_stack_node *a, t_stack_node *b)
 {
-	set_index_and_isabove_midian(a);
-	set_index_and_isabove_midian(b);
+	set_index_and_abovemidian(a);
+	set_index_and_abovemidian(b);
 	set_targetof_b(a, b);
 }

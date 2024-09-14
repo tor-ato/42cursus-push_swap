@@ -45,7 +45,7 @@ char			**split(char *s, char c);
 
 void			init_nodes_a(t_stack_node *a, t_stack_node *b);
 void			init_nodes_b(t_stack_node *a, t_stack_node *b);
-void			set_index_and_isabove_midian(t_stack_node *stack);
+void			set_index_and_abovemidian(t_stack_node *stack);
 void			find_and_set_cheapstcost_node(t_stack_node *stack);
 t_stack_node	*get_cheapest_node(t_stack_node *stack);
 void			rotate_until_topnode(t_stack_node **stack, t_stack_node *top_node,

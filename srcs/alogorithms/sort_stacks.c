@@ -18,8 +18,8 @@ static void	rotate_both(t_stack_node **a, t_stack_node **b,
 {
 	while (*b != cheapest_node->target_node && *a != cheapest_node)
 		rr(a, b);
-	set_index_and_isabove_midian(*a);
-	set_index_and_isabove_midian(*b);
+	set_index_and_abovemidian(*a);
+	set_index_and_abovemidian(*b);
 }
 
 static void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
@@ -27,8 +27,8 @@ static void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
 {
 	while (*b != cheapest_node && *a != cheapest_node)
 		rrr(a, b);
-	set_index_and_isabove_midian(*a);
-	set_index_and_isabove_midian(*b);
+	set_index_and_abovemidian(*a);
+	set_index_and_abovemidian(*b);
 }
 
 static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
@@ -77,6 +77,6 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 		init_nodes_b(*a, *b);
 		move_b_to_a(a, b);
 	}
-	set_index_and_isabove_midian(*a);
+	set_index_and_abovemidian(*a);
 	min_on_top(a);
 }

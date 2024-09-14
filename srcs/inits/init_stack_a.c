@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
-#include <stdbool.h>
 
 static long	ft_atol(const char *s)
 {
