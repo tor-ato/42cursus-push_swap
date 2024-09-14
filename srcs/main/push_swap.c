@@ -15,7 +15,10 @@
 static char	**process_args(int argc, char **argv)
 {
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		exit(1);
+	{
+		ft_dprintf(STDERR_FILENO, "Error\n");
+		exit(EXIT_SUCCESS);
+	}
 	if (argc == 2)
 		return (split(argv[1], ' '));
 	return (argv);
@@ -25,9 +28,9 @@ static void	sort_if_needed(t_stack_node **a, t_stack_node **b)
 {
 	if (!is_stack_sorted(*a))
 	{
-		if (count_stack_len(*a) == 2) // TWO_NODE
+		if (count_stack_len(*a) == 2)
 			sa(a);
-		else if (count_stack_len(*a) == 3) // THREE_NODE
+		else if (count_stack_len(*a) == 3)
 			sort_three(a);
 		else
 			sort_stacks(a, b);

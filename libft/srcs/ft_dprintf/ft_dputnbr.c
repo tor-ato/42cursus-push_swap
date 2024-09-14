@@ -27,7 +27,7 @@ void	ft_dputnbr(int fd, long nbr, char *base)
 	else
 	{
 		ft_dputnbr(fd, nbr / base_len, base);
-		ft_dputnbr(fd ,nbr % base_len, base);
+		ft_dputnbr(fd, nbr % base_len, base);
 	}
 	return ;
 }
