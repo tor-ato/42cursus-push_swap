@@ -17,11 +17,6 @@
 # include <limits.h>
 # include <stdlib.h>
 # include "../libft/includes/libft.h"
-typedef enum s_age 
-{
-	KENTA = 27,
-	TRT = 24,
-}			t_age;
 
 typedef struct s_stack_node
 {
@@ -48,8 +43,8 @@ void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 void			set_index_and_abovemidian(t_stack_node *stack);
 void			find_and_set_cheapstcost_node(t_stack_node *stack);
 t_stack_node	*get_cheapest_node(t_stack_node *stack);
-void			rotate_until_topnode(t_stack_node **stack, t_stack_node *top_node,
-					char stack_name);
+void			rotate_until_topnode(t_stack_node **stack,
+					t_stack_node *top_node, char stack_name);
 
 int				count_stack_len(t_stack_node *stack);
 t_stack_node	*find_last_node(t_stack_node *stack);
