@@ -46,7 +46,7 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 	pb(b, a);
 }
 
-static void	min_on_top(t_stack_node **a)
+static void	put_smallestnbt_node_ontop(t_stack_node **a)
 {
 	while ((*a)->nbr != find_smallest_nbr_node(*a)->nbr)
 	{
@@ -78,5 +78,5 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 		move_b_to_a(a, b);
 	}
 	set_index_and_abovemidian(*a);
-	min_on_top(a);
+	put_smallestnbt_node_ontop(a);
 }
