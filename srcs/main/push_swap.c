@@ -15,10 +15,7 @@
 static char	**process_args(int argc, char **argv)
 {
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-	{
-		ft_dprintf(STDERR_FILENO, "Error\n");
 		exit(EXIT_SUCCESS);
-	}
 	if (argc == 2)
 		return (split(argv[1], ' '));
 	return (argv);
